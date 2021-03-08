@@ -6,7 +6,14 @@ public class Personne {
     private int id;
     private String nom;
     private String prenom;
+    public Personne(){
 
+    }
+
+    public Personne(String nom, String prenom) {
+        this.nom = nom;
+        this.prenom = prenom;
+    }
     public Personne(int id, String nom, String prenom) {
         this.id = id;
         this.nom = nom;
