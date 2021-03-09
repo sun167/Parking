@@ -7,7 +7,14 @@ public class Voiture {
         private String nom;
         private String immatriculation;
         private Personne conducteur;
+        public Voiture(){
 
+        }
+        public Voiture(String nom, String immatriculation, Personne conducteur){
+            this.nom = nom;
+            this.immatriculation = immatriculation;
+            this.conducteur = conducteur;
+        }
         public Voiture(int id, String nom, String immatriculation, Personne conducteur) {
             this.id = id;
             this.nom = nom;
