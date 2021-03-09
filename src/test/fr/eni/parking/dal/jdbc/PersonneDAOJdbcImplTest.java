@@ -1,4 +1,4 @@
-package jdbc;
+package test.fr.eni.parking.dal.jdbc;
 
 import fr.eni.parking.bo.Personne;
 import fr.eni.parking.dal.DAOFactory;
