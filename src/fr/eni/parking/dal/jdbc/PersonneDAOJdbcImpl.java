@@ -24,7 +24,7 @@ public class PersonneDAOJdbcImpl implements PersonneDAO {
                 conducteur.setPrenom(rs.getString("prenom"));
             }
         } catch (SQLException e){
-            throw new DALException("Get article failed - id: " + id, e);
+            throw new DALException("Get personne failed - id: " + id, e);
         }
         return conducteur;
     }
@@ -63,7 +63,7 @@ public class PersonneDAOJdbcImpl implements PersonneDAO {
             rqt.executeUpdate();
 
         } catch (SQLException e) {
-            throw new DALException("Update article failed - " + item, e);
+            throw new DALException("Update personne failed - " + item, e);
         }
 
 
@@ -84,7 +84,7 @@ public class PersonneDAOJdbcImpl implements PersonneDAO {
             }
         } catch (SQLException e){
 
-            throw new DALException("Insert article failed - personne: " + item, e);
+            throw new DALException("Insert failed - personne: " + item, e);
         }
     }
 
@@ -96,7 +96,7 @@ public class PersonneDAOJdbcImpl implements PersonneDAO {
             rqt.setInt(1, id);
             rqt.executeUpdate();
         } catch (SQLException e) {
-            throw new DALException("Delete article failed - id=" + id, e);
+            throw new DALException("Delete personne failed - id=" + id, e);
         }
     }
 }
