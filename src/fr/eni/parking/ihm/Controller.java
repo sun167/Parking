@@ -134,8 +134,10 @@ public class Controller {
     public void ajouterVoiture(ActionEvent actionEvent) {
         try {
             Voiture voitureAjouter = new Voiture();
+            Personne conducteur = comboNom.getSelectionModel().getSelectedItem();
             voitureAjouter.setNom(voitureField.getText());
             voitureAjouter.setImmatriculation(immatriculationField.getText());
+            voitureAjouter.setConducteur(conducteur);
             voitureData.addVoiture(voitureAjouter);
             initialize();
         } catch (Exception e) {
