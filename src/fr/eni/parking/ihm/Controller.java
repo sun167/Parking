@@ -146,6 +146,18 @@ public class Controller {
     }
 
     public void modifierVoiture(ActionEvent actionEvent) {
+    	try {
+            Voiture voitureAModifier = new Voiture();
+            conducteurComboBox = comboNom.getSelectionModel().getSelectedItem();
+            voitureAModifier.setId(indexVoiture);
+            voitureAModifier.setNom(voitureField.getText());
+            voitureAModifier.setImmatriculation(immatriculationField.getText());
+            voitureAModifier.setConducteur(conducteurComboBox);
+            voitureData.updateVoiture(voitureAModifier);
+            initialize();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void supprimerVoiture(ActionEvent actionEvent) {
